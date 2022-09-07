@@ -1,0 +1,433 @@
+<form class="py-3 regFormContainer my-5" *ngIf="myData.length > 0">
+  <div class="text-center">
+    <img src="{{ logo }}" alt="logo" class="logoContainer" />
+  </div>
+  <div>
+    <div class="row my-3" *ngIf="myData.includes('full name')">
+      <div class="col">
+        <label for="full_name" class="form-label mb-2"> Full Name </label>
+        <input
+          type="text"
+          class="form-control form-control-sm"
+          id="full_name"
+        />
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('given name')">
+      <div class="col">
+        <label for="gName" class="form-label mb-2"> Given Name </label>
+        <input type="text" class="form-control form-control-sm" id="gName" />
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('second given name')">
+      <div class="col">
+        <label for="gName2" class="form-label mb-2">Second Given Name </label>
+        <input type="text" class="form-control form-control-sm" id="gName2" />
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('third given name')">
+      <div class="col">
+        <label for="gName3" class="form-label mb-2">Third Given Name</label>
+        <input type="text" class="form-control form-control-sm" id="gName3" />
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('fourth given name')">
+      <div class="col">
+        <label for="gName4" class="form-label mb-2">Fourth Given Name </label>
+        <input type="text" class="form-control form-control-sm" id="gName4" />
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('family last name')">
+      <div class="col">
+        <label for="familyName" class="form-label mb-2">Family Name</label>
+        <input
+          type="text"
+          class="form-control form-control-sm"
+          id="familyName"
+        />
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('preferred given name')">
+      <div class="col">
+        <label for="pGName" class="form-label mb-2">Prefered Given Name</label>
+        <input type="text" class="form-control form-control-sm" id="pGName" />
+      </div>
+    </div>
+
+    <div class="row my-3" *ngIf="myData.includes('family last name ar')">
+      <div class="col">
+        <label for="fLNameAr" class="form-label mb-2">Family Name Arabic</label>
+        <input
+          dir="rtl"
+          type="text"
+          class="form-control form-control-sm"
+          id="fLNameAr"
+        />
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('given name ar')">
+      <div class="col">
+        <label for="gNameAr" class="form-label mb-2">Given Name Arabic</label>
+        <input
+          dir="rtl"
+          type="text"
+          class="form-control form-control-sm"
+          id="gNameAr"
+        />
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('fathers name ar')">
+      <div class="col">
+        <label for="fNameAr" class="form-label mb-2">Fathers Name Arabic</label>
+        <input
+          dir="rtl"
+          type="text"
+          class="form-control form-control-sm"
+          id="fNameAr"
+        />
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('grandfathers name arabic')">
+      <div class="col">
+        <label for="gFNameAr" class="form-label mb-2"
+          >Grandfathers Name Arabic</label
+        >
+        <input
+          dir="rtl"
+          type="text"
+          class="form-control form-control-sm"
+          id="gFNameAr"
+        />
+      </div>
+    </div>
+    <div
+      class="row my-3"
+      *ngIf="myData.includes('great grand fathers name arabic')"
+    >
+      <div class="col">
+        <label for="gGFNameAr" class="form-label mb-2"
+          >Great Grand Fathers Name Arabic</label
+        >
+        <input
+          type="text"
+          dir="rtl"
+          class="form-control form-control-sm"
+          id="gGFNameAr"
+        />
+      </div>
+    </div>
+
+    <div class="row my-3" *ngIf="myData.includes('preferred family last name')">
+      <div class="col">
+        <label for="pFamilyName" class="form-label mb-2"
+          >Prefered Family Name</label
+        >
+        <input
+          type="text"
+          class="form-control form-control-sm"
+          id="pFamilyName"
+        />
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('phone number')">
+      <div class="col">
+        <label for="phone_number" class="form-label mb-2">Phone Number</label>
+        <input
+          type="text"
+          class="form-control form-control-sm"
+          id="phone_number"
+        />
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('nationality')">
+      <div class="col">
+        <label for="nationality" class="form-label mb-2">Nationality</label>
+        <select
+          id="nationality"
+          class="form-select"
+          aria-label="Default select example"
+        >
+          <option selected disabled>Select your country...</option>
+          <option *ngFor="let item of countries" value="{{ item.name }}">
+            {{ item.name }}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('qatar id number')">
+      <div class="col">
+        <label for="qatar_id_number" class="form-label mb-2"
+          >Qatar id number</label
+        >
+        <input
+          type="text"
+          class="form-control form-control-sm"
+          id="qatar_id_number"
+        />
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('gender sex')">
+      <div class="col">
+        <label for="gender" class="form-label mb-2">Gender</label>
+        <select
+          id="gender"
+          class="form-select"
+          aria-label="Default select example"
+        >
+          <option selected disabled>Select gender...</option>
+          <option value="m">Male</option>
+          <option value="f">Female</option>
+        </select>
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('dob day')">
+      <div class="col">
+        <label for="dob" class="form-label mb-2">Date Of Birth</label>
+        <div id="dob" class="row">
+          <select class="form-select col-2" name="day">
+            <option selected disabled>day</option>
+            <option *ngFor="let item of days; index as i">{{ item }}</option>
+          </select>
+          <select class="form-select col-2" name="month">
+            <option selected disabled>month</option>
+            <option *ngFor="let item of months; index as i">
+              {{ item }}
+            </option>
+          </select>
+          <select class="form-select col-4" name="year">
+            <option selected disabled>year</option>
+            <option *ngFor="let item of years; index as i">{{ item }}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('email')">
+      <div class="col">
+        <label for="email" class="form-label mb-2">Email</label>
+        <input type="text" class="form-control form-control-sm" id="email" />
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('email cc')">
+      <div class="col">
+        <label for="emailcc" class="form-label mb-2">Email CC</label>
+        <input type="text" class="form-control form-control-sm" id="emailcc" />
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('registration type')">
+      <div class="col">
+        <label for="registration_type" class="form-label mb-2"
+          >Registration Type</label
+        >
+        <div id="registration_type">
+          <select class="form-select col-2" name="registration_type">
+            <option selected disabled>Select registration type</option>
+            <option
+              *ngFor="let type of registrationData.registration_type"
+              value="{{ type }}"
+            >
+              {{ type }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('subcategory')">
+      <div class="col">
+        <label for="subcategory" class="form-label mb-2">Subcategory</label>
+        <div id="subcategory">
+          <select class="form-select col-2" name="subcategory">
+            <option selected disabled>Select subcategory</option>
+            <option
+              *ngFor="let type of registrationData.subcategory"
+              value="{{ type }}"
+            >
+              {{ type }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('passport number')">
+      <div class="col">
+        <label for="passNb" class="form-label mb-2">Passport Number</label>
+        <input type="text" class="form-control form-control-sm" id="passNb" />
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('vaccine doses')">
+      <div class="col">
+        <label for="vaccine_doses" class="form-label mb-2">Vaccine doses</label>
+        <input
+          type="number"
+          class="form-control form-control-sm"
+          id="vaccine_doses"
+        />
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('vaccine name')">
+      <div class="col">
+        <label for="vaccine_name" class="form-label mb-2">Vaccine name</label>
+        <div id="vaccine_name">
+          <select class="form-select col-2" name="vaccine_name">
+            <option selected disabled>Select vaccine name</option>
+            <option
+              *ngFor="let type of registrationData.vaccine_type"
+              value="{{ type }}"
+            >
+              {{ type }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('passport type')">
+      <div class="col">
+        <label for="passType" class="form-label mb-2">Passport Type</label>
+        <div id="passType">
+          <select class="form-select col-2" name="passType">
+            <option selected disabled>Select passport type</option>
+            <option
+              *ngFor="let type of registrationData.passport_types"
+              value="{{ type }}"
+            >
+              {{ type }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('passport issuing country')">
+      <div class="col">
+        <label for="passCountry" class="form-label mb-2"
+          >Passport Issuing Country</label
+        >
+        <input
+          type="text"
+          class="form-control form-control-sm"
+          id="passCountry"
+        />
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('passport expiry date day')">
+      <div class="col">
+        <label for="passexpire" class="form-label mb-2">Passport Expiry</label>
+        <div id="passexpire" class="row">
+          <select class="form-select col-2" name="passexpireday">
+            <option selected disabled>day</option>
+            <option *ngFor="let item of days; index as i">{{ item }}</option>
+          </select>
+          <select class="form-select col-2" name="passexpiremonth">
+            <option selected disabled>month</option>
+            <option *ngFor="let item of months; index as i">
+              {{ item }}
+            </option>
+          </select>
+          <select class="form-select col-4" name="passexpireyear">
+            <option selected disabled>year</option>
+            <option *ngFor="let item of years; index as i">{{ item }}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div
+      class="row my-3"
+      *ngIf="myData.includes('accreditation terms and conditions')"
+    >
+      <div class="col">
+        <label for="t&c" class="form-label mb-2"
+          >Accreditation Terms And Conditions</label
+        >
+        <input type="text" class="form-control form-control-sm" id="t&c" />
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('job title')">
+      <div class="col">
+        <label for="job_title" class="form-label mb-2">Job Title</label>
+        <input
+          type="text"
+          class="form-control form-control-sm"
+          id="job_title"
+        />
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('organization name')">
+      <div class="col">
+        <label for="organization_name" class="form-label mb-2"
+          >Organization Name</label
+        >
+        <input
+          type="text"
+          class="form-control form-control-sm"
+          id="organization_name"
+        />
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('organization field')">
+      <div class="col">
+        <label for="organization_field" class="form-label mb-2"
+          >Organization Field</label
+        >
+        <div id="organization_field">
+          <select class="form-select col-2" name="organization_field">
+            <option selected disabled>Select organization field</option>
+            <option
+              *ngFor="let type of registrationData.organization_field"
+              value="{{ type }}"
+            >
+              {{ type }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('function')">
+      <div class="col">
+        <label for="function" class="form-label mb-2">Function</label>
+        <input type="text" class="form-control form-control-sm" id="function" />
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('preferred language')">
+      <div class="col">
+        <label for="prefLanguage" class="form-label mb-2"
+          >Preferred Language</label
+        >
+        <div id="prefLanguage">
+          <select class="form-select col-2" name="passType">
+            <option selected disabled>Select preferred language</option>
+            <option
+              *ngFor="let type of registrationData.preferred_language"
+              value="{{ type }}"
+            >
+              {{ type }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row my-3" *ngIf="myData.includes('document type')">
+      <div class="col">
+        <label for="document_type" class="form-label mb-2">Document Type</label>
+        <div id="document_type">
+          <select class="form-select col-2" name="document_type">
+            <option selected disabled>Select document type</option>
+            <option
+              *ngFor="let type of registrationData.document_type"
+              value="{{ type }}"
+            >
+              {{ type }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row my-3">
+    <div class="col">
+      <button class="btn btn-sm btn-outline-primary">Submit</button>
+    </div>
+  </div>
+</form>
+<!-- 
+Photo Image
+Passport Copy
+vaccine_certificate_upload
+ -->
