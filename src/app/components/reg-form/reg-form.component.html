@@ -1,3 +1,7 @@
+<div class="text-center" *ngIf="!token || myData.length == 0">
+  <h1 class="mt-5">Please add a token</h1>
+  <p>Example: http://localhost:4200?token=f6af4af4a5f</p>
+</div>
 <form class="py-3 regFormContainer my-5" *ngIf="myData.length > 0">
   <div class="text-center">
     <img src="{{ logo }}" alt="logo" class="logoContainer" />
